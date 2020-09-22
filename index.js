@@ -1,7 +1,8 @@
 const path = require('path');
 const fg = require('fast-glob');
+const normalize = require('normalize-path');
 
-const input = path.resolve('test/fixtures/index.html');
+const input = normalize(path.resolve('test/fixtures/index.html'));
 console.log({input})
 const entries = fg.sync(input)
 
